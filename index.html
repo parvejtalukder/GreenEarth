@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Earth</title>
+    <!-- D_UI  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- tailwind css  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- font awosome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css for fonts -->
+    <link rel="stylesheet" href="./tailwind.config.css">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+</head>
+<body class="inter-font flex flex-col justify-center mx-auto my-0">
+    <!-- Header Part  -->
+    <header>
+        <!-- Nav  -->
+        <div class="bg-[#15803D] inter-font h-[70px] flex items-center justify-between">
+            <nav class="w-full ml-10 mr-11 px-auto">
+                <div class="flex items-center justify-between">
+                    <div class="text-white text-2xl font-bold rounded-lg px-4 flex justify-center items-center space-x-1">
+                        <img src="./assets/logo.png" alt="" class="hidden lg:w-10 lg:block">
+                        <div class="lg:hidden md:hidden" id="mobileManu">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <p class="text-xl lg:text-3xl">Green Earth</p>
+                    </div>
+                    <div class="hidden md:flex justify-center">
+                        <div class="flex items-center gap-x-8">
+                            <a href="#" class="text-white hover:text-yellow-400 font-medium text-[16px] rounded-lg px-2">About</a>
+                            <a href="#" class="text-white hover:text-yellow-400 font-medium text-[16px] rounded-lg px-2">Gallery</a>
+                            <a href="#" class="text-white hover:text-yellow-400 font-medium text-[16px] rounded-lg px-2">Plant a Tree</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="bg-yellow-400 text-green-900 font-normal rounded-full hover:bg-yellow-500 h-[43px] w-[138px]">Plant a Tree</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="manu" class="w-full h-auto bg-gray-400 hidden lg:hidden md:hidden relative">
+        <div class="flex flex-col items-left p-3 gap-2">
+                            <a href="#" class="text-white hover:text-yellow-400 font-medium text-[16px] rounded-lg px-2 border-2">About</a>
+                            <a href="#" class="text-white hover:text-yellow-400 font-medium text-[16px] rounded-lg px-2 border-2">Gallery</a>
+                            <a href="#" class="text-white hover:text-yellow-400 font-medium text-[16px] rounded-lg px-2 border-2">Plant a Tree</a>
+        </div>
+        </div>
+        <!-- HEAD BANNER  -->
+        <div class="w-full h-[381px] bg-[#CFF0DC]">
+            <div class="p-[20px] flex justify-around absolute">
+                            <!-- left leap  -->
+            <div class="hidden md:flex justify-items-start relative">
+                <img src="./assets/hero-leaf1.png" alt="leap" class="h-[360px]">
+            </div>
+            <div class="flex flex-col justify-center items-center text-center gap-3 p-6 lg:p-0">
+                <img src="./assets/logo.png" alt="logo" class="w-[100px] md:hidden lg:hidden">
+                <p class="text-3xl font-bold ld:text-4xl text-[#1F2937]">Plant a Tree, Grow a Future</p>
+                <p class="font-normal text-[16px] text-[#1F2937]">Join our mission to plant 1 million trees and make the Earth greener for future generations.</p>
+                <button class="bg-yellow-400 text-green-900 font-normal rounded-full hover:bg-yellow-500 h-[43px] w-[138px]">Get Involved</button>
+            </div>
+            <div class="hidden md:flex justify-items-end relative">
+                <img src="./assets/hero-leaf2.png" alt="leap" class="h-[360px]">
+            </div>
+            </div>
+        </div>
+    </header>
+    <main class="h-full"> 
+        <!-- SERVICES SECTION -->
+        <section class="bg-[#F3FAF8] p-4">
+            <!-- Parent -->
+            <h2 class="text-center mb-3 lg:mb-[40px] lg:mt-16 font-semibold text-3xl">Choose Your Trees</h2>
+            <section class="lg:mx-auto lg:w-11/12 lg:grid lg:grid-cols-12 lg:gap-3 lg:h-full">
+                <aside class="px-10 order-1 mb-5 lg:px-0 lg:mb-0 lg:order-0 lg:col-span-2 lg:h-full lg:block">
+                <h2 class="lg:text-xl text-center lg:text-left font-semibold mb-5 lg:mb-auto" id="catMob">Categories <span class="lg:hidden"><i id="manuAlert" class="fa-solid fa-circle-chevron-down"></i></span></h2>
+                <section class="hidden bg-amber-100 rounded-2xl lg:bg-transparent lg:block lg:h-full lg:w-auto lg:mt-[12px]" id="catForMob">
+                    <!-- bg-[#157c3d] -->
+                    <div id="categoryID" class="grid grid-cols-2 lg:flex lg:flex-col gap-5 lg:gap-3">
+                    <button onclick="AllTrees();" id="cat0" class="catCl w-full h-[35px] flex flex-row justify-start items-center px-[10px] py-2 rounded-sm text-black hover:text-white hover:bg-[#34e277]">
+                    All Trees
+                    </button>
+                    </div>
+                </section>
+            </aside>
+                <section class="col-span-8">
+                    <div id="cardsID" class="grid grid-cols-1 px-10 gap-4 lg:p-0 lg:grid-cols-3 lg:gap-3 w-full">
+                        <!-- <div class="w-auto h-auto flex flex-col justify-start items-start p-4 rounded-md bg-white">
+                            <img src="https://i.ibb.co.com/cSQdg7tf/mango-min.jpg" alt="frute" class="rounded-md w-full h-[185px]">
+                            <div class="flex flex-col gap-3">
+                                <h2 class="mt-3 text-gray-900 text-[14px] font-semibold">title</h2>
+                                <p class="text-gray-800 text-[12px] font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quibusdam illo fugiat.</p>
+                                <div class="flex justify-between items-center">
+                                    <div class="w-auto h-[28px] flex justify-center items-center rounded-full px-2 pb-0.5 bg-[#dcfce7] text-[#157c3d] text-[14px] font-medium">Category</div>
+                                    <p class="text-gray-900 text-[14px] font-semibold text-right">৳<span id="priceID">500</span></p>
+                                </div>
+                                <button class="w-full h-[43px] flex flex-row justify-center items-center py-3 px-5 rounded-full bg-[rgba(21,128,61,1)] text-white text-[16px] font-medium">Add to Cart</button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="mt-5 flex flex-col justify-center items-center hidden" id="loadingGif">
+                        <img src="./assets/loading.gif" alt="i" class="w-[100px]">
+                    </div>
+                </section>
+            <aside class="col-span-2 h-full px-10 lg:p-0">
+                <section class="bg-white rounded-[16px] p-5 lg:h-full lg:w-auto mt-6 lg:mt-0">
+                    <h2 class="text-xl font-semibold">Your Cart</h2>
+                    <!-- <button class="w-full h-[35px] flex flex-row justify-start items-center px-[10px] py-2 rounded-sm text-black hover:text-white hover:bg-[#34e277]">
+                    All Trees
+                    </button> -->
+                    <div id="cartList" class="grid grid-cols-1 px-1 mt-2 gap-3">
+                        <!-- <div class="w-full h-[64px] flex flex-row justify-between items-center p-2 rounded-md bg-[#F0FDF4]">
+                            <div class="flex flex-col justify-items-start">
+                                <h2 class="text-gray-900 font-sans text-sm font-semibold leading-5 text-left">Lorem ipsum</h2>
+                                <p class="text-gray-600 text-[16px] font-normal text-left">Lorem ipsum</p>
+                            </div>
+                            <i class="fa-solid fa-xmark"></i>
+                        </div> -->
+                    </div>
+                    <div class="flex justify-between items-center px-1 mt-2 gap-3">
+                        <p>Total: </p>
+                        <p>৳ <span id="totalShowCase">0.00</span></p>
+                    </div>
+                </section>
+            </aside>
+            </section>     
+        </section>
+        <!-- after plants -->
+        <section class="bg-[#F3FAF8] flex flex-col justify-center items-center">
+            <article class="h-auto">
+                <h2 class="text-center font-semibold text-2xl lg:text-3xl">About the Campaign</h2>
+                <section class="flex flex-col lg:flex-row justify-center items-center p-5 lg:gap-8 lg:w-[800px]">
+                    <figure>
+                        <img src="./assets/about.png" alt="plants" class="w-[300px] h-max-[500px] lg:w-[500px] mb-5">
+                    </figure>
+                    <div class="flex flex-col justify-center items-start gap-5 w-[300px] text-justify lg:w-[450px] mb-2 lg:mb-2">
+                        <p class="text-[16px] font-normal text-gray-800">Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</p>
+                        <ul class="decoration-0 list-disc flex flex-col justify-items-start pl-3 text-[16px] text-gray-800 font-normal">
+                            <li>Restoration of natural habitats</li>
+                            <li>Improvement of air quality</li>
+                            <li>Support for local communities</li> 
+                        </ul>
+                    </div>
+                </section>
+            </article>
+        </section>
+        <!-- client hub  -->
+        <section class="bg-[rgba(207,240,220,1)] py-16 px-20">
+            <h2 class="text-[rgba(31,41,55,1)] text-[32px] font-semibold text-center mb-[30px]">Our Impact</h2>
+            <section class="flex flex-col lg:flex-row justify-around items-center gap-[35px]">
+                <section class="w-[300px] lg:w-[400px] h-[100px] lg:h-[120px] flex flex-col justify-center items-center p-10 rounded-[12px] shadow-sm bg-white hover:bg-amber-50">
+                    <h2 class="font-bold text-3xl text-[#047c00] text-center">500K+</h2>
+                        <p class="text-center text-gray-800">Trees Planted</p>
+                </section>
+                <section class="w-[300px] lg:w-[400px] h-[100px] lg:h-[120px] flex flex-col justify-center items-center p-10 rounded-[12px] shadow-sm bg-white hover:bg-amber-50">
+                    <h2 class="font-bold text-3xl text-[#047c00] text-center">120+</h2>
+                        <p class="text-center text-gray-800">Communities Involved</p>
+                </section>
+                <section class="w-[300px] lg:w-[400px] h-[100px] lg:h-[120px] flex flex-col justify-center items-center p-10 rounded-[12px] shadow-sm bg-white hover:bg-amber-50">
+                    <h2 class="font-bold text-3xl text-[#047c00] text-center">30+</h2>
+                        <p class="text-center text-gray-800">Countries Reached</p>
+                </section>
+            </section>
+        </section>
+    </main>
+            <footer>
+            <section class="bg-[#166534]">
+                <div class="flex flex-col justify-center items-center p-20 gap-5">
+                    <h2 class="text-3xl font-bold text-white text-center">Plant a Tree Today</h2>
+                    <div class="shadow-sm bg-[#129e48] lg:w-[430px] h-auto p-[40px] rounded-2xl flex flex-col justify-center items-center gap-3">
+                        <input type="text" placeholder="Your Name" class="input w-full" />
+                        <input type="text" placeholder="Your Email" class="input w-full" />
+                        <!-- <input type="checkbox" placeholder="Your Email" class="input w-full" /> -->
+                        <select class="select select-neutral w-full border-0 text-gray-500">
+                            <option disabled selected>Number of Trees</option>
+                            <option>200</option>
+                            <option>2000</option>
+                            <option>30000</option>
+                        </select>
+                        <button class="w-full h-[43px] flex flex-row justify-center items-center py-3 px-5 rounded-full bg-yellow-400 hover:bg-yellow-500 text-green-900 text-[16px] font-medium">Donate Now</button>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-footer flex justify-center items-center">
+                <p class="text-[16px] font-normal text-center text-white">© 2025 Green Earth. All Rights Reserved.</p>
+            </section>
+        </footer>
+        <!-- popup  -->
+         <div id="popupModal" class="hidden fixed inset-0 bg-transparent backdrop-blur-sm grid place-items-center z-50">
+  <div class="relative w-[400px] bg-white p-4 rounded-md shadow-lg">
+    <button id="closeBtn" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-xl font-bold focus:outline-none">X</button>
+    <div id="popCardContainer" class="rounded-full"></div>
+  </div>
+</div>
+    <!-- JavaScript  -->
+    <script src="./scripts/front/main.js"></script>
+    <script src="./scripts/front/category.js"></script>
+</body>
+</html>

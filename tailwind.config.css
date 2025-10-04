@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+/* FONTS  */
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.active {
+  background: #157c3d;
+  color: white;
+}
+.bg-footer{
+  background: rgba(20, 83, 45, 1);
+  width: full;
+  height: 72px;
+}
